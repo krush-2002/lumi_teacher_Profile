@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+  --color-lime: #b7f000;
+  --color-lime-dark: #a7dc00;
+  --color-olive: #678600;
+  --color-charcoal: #252525;
+  --color-footer: #191919;
+  --color-whatsapp: #208b58;
+  --color-muted: #777777;
+  --color-surface: #f4f5f2;
+  --color-soft-green: #f1f8d9;
+  --color-line: #e8e9e5;
+  --color-hero: #fafbf7;
+  --shadow-card: 0 18px 45px rgba(37, 37, 37, 0.09);
+  --shadow-lime: 0 5px 16px rgba(183, 240, 0, 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background: white;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-lime);
+    color: var(--color-charcoal);
+  }
+
+  a,
+  button,
+  input,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
